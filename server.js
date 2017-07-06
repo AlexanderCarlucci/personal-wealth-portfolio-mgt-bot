@@ -47,7 +47,7 @@ else if (process.env.USE_TWILIO_SMS) {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(express.static('public'));
 }
-
+require('./lib/init').init();
 // Helper Function to check for environment variables
 var checkAndRequire = function(envItem, toRequire, debugMessage) {
   if (envItem && envItem.match(/true/i)) {
