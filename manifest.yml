@@ -22,5 +22,5 @@ applications:
   path: .
   memory: 512M
   instances: 1
-  domain: mybluemix.net
+  domain: stage1.mybluemix.net
   disk_quota: 1024M
