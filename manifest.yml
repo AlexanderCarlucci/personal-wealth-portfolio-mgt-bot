@@ -24,3 +24,7 @@ applications:
   instances: 1
   domain: stage1.mybluemix.net
   disk_quota: 1024M
+env:
+    #environment variables
+    USE_WEBUI: true
+    CRED_SIMULATED_INSTRUMENT_ANALYTICS_SCENARIO_FILENAME: ./resources/spdown5_scenario.csv

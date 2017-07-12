@@ -25,6 +25,7 @@ var helmet = require('helmet');
 var port = process.env.VCAP_APP_PORT || process.env.PORT || 3000;
 var http = require('http').Server(app);
 var debug = require('debug')('bot:server');
+var configuration = require('./lib/configuration');
 
 // Deployment tracking
 //require('cf-deployment-tracker-client').track();
@@ -37,7 +38,7 @@ app.use('/api/', rateLimit({
   max: 15
 }));
 
-
+configuration.configurePortfolio();
 if (process.env.USE_WEBUI) {
   app.use(bodyParser.json());
   app.use(express.static('public'));
